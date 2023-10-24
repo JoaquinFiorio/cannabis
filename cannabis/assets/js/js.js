@@ -4,7 +4,7 @@ window.addEventListener("scroll", function(){
 });
 
 var swiper = new Swiper(".swiper", {
-    
+    effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 2,
@@ -19,15 +19,14 @@ var swiper = new Swiper(".swiper", {
         // Cuando el ancho de la ventana es igual o mayor a 768px
         768: {
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 40,
 
         },
         1024: {
             slidesPerView: 2,
-            spaceBetween: 100,
+            spaceBetween: 70,
         },
     },
-    spaceBetween: 100,
     loop: true,
     navigation: {
       nextEl: ".button-next", // Clase del botón "Next"

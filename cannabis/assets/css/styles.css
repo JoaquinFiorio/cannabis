@@ -743,9 +743,16 @@ form input[type="submit"] {
         padding: 30px 0px !important;
     }
     .swiper-slide {
-        width: 150px !important;
+        width: 210px !important;
     }
     .swiper-slide {
         filter: blur(0px);
+    }
+    #swiper {
+        padding: 50px 0px;
+        gap: 10px;
+    }
+    .button-next, .button-prev {
+        display: none;
     }
 }
