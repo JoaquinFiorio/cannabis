@@ -617,6 +617,7 @@ form input[type="submit"] {
     font-size: 18px;
     background-color: var(--amarillo);
     font-weight: 700;
+    cursor: pointer;
 }
 
 .support {
@@ -635,6 +636,10 @@ form input[type="submit"] {
     flex-direction: column;
 }
 
+.links p {
+    cursor: pointer;
+}
+
 .links p, .support p {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -649,4 +654,98 @@ form input[type="submit"] {
 
 .socialNetworks svg{
     height: 2em;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 450px) {
+    header {
+        padding: 15px 5%;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .home {
+        padding: 0px 3%;
+    }
+    .home h2 {
+        font-size: 28px;
+    }
+    .welcomeDigital, .welcomeMetaverse, .token, .containerPost, .partners {
+        padding: 50px 5%;
+    }
+    .digitalWorld {
+        flex-direction: column;
+    }
+    .digitalWorld img {
+        width: 100%;
+    }
+    .digitalWorld .parrafo h1 {
+        font-size: 28px;
+    }
+    .token {
+        flex-direction: column;
+    }
+    .title h1 {
+        margin-top: 25px;
+    }
+    #roadmap {
+        height: 210vh;
+    }
+    .derecha, .izquierda {
+        margin-left: 0px;
+    }
+    .secciones {
+        gap: 50px;
+    }
+    .posts .titlePost {
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .posts .titlePost img {
+        width: 50%;
+    }
+    .containerPost button {
+        font-size: 18px;
+    }
+    .post img, .partner img {
+        width: 35%;
+    }
+    .post, .partner {
+        gap: 25px;
+    }
+    footer {
+        padding: 50px 5%;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contactInfo {
+        width: 100%;
+        align-items: center;
+    }
+    .contactForm {
+        border-top: 2px solid var(--amarillo);
+        border-bottom: 2px solid var(--amarillo);
+        border-left: none;
+        border-right: none;
+        padding: 30px 0px;
+    }
+    .support, .links {
+        align-items: center;
+    }
+    .liquidity {
+        display: none;
+    }
+    .swiper {
+        padding: 30px 0px !important;
+    }
+    .swiper-slide {
+        width: 150px !important;
+    }
+    .swiper-slide {
+        filter: blur(0px);
+    }
 }

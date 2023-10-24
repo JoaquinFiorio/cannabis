@@ -4,7 +4,7 @@ window.addEventListener("scroll", function(){
 });
 
 var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
+    
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 2,
@@ -20,6 +20,7 @@ var swiper = new Swiper(".swiper", {
         768: {
             slidesPerView: 1,
             spaceBetween: 10,
+
         },
         1024: {
             slidesPerView: 2,
@@ -33,3 +34,7 @@ var swiper = new Swiper(".swiper", {
       prevEl: ".button-prev" // Clase del botón "Prev"
     },
 });
+
+
+
+
