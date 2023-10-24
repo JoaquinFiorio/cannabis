@@ -35,6 +35,10 @@ var swiper = new Swiper(".swiper", {
     },
 });
 
+document.getElementById("connect_button").addEventListener("click", () => {
+    console.log(window)
+})
+
 
 
 
