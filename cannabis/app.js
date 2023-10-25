@@ -13,6 +13,6 @@ app.use(express.static(path.join(__dirname, 'src/public')));
 /* RUTAS */
 app.use("/", vistaRutas);
 
-app.listen(3030, () => {
-    console.log(`Servidor iniciado en http://localhost:3030`);
+app.listen(process.env.PORT || 3030, () => {
+    console.log(`Servidor iniciado en http://localhost:${process.env.port}`);
 });
