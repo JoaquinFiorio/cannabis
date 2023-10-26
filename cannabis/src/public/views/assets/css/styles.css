@@ -656,6 +656,19 @@ form input[type="submit"] {
     height: 2em;
 }
 
+.img-token {
+    animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px); /* Ajusta la cantidad de movimiento vertical */
+    }
+}
+
 
 /* RESPONSIVE */
 
