@@ -88,12 +88,18 @@ nav ul {
     align-items: center;
 }
 
-nav ul a, header nav button, .home h1, .home p, .welcomeMetaverse p, .tokenTitle h1, .tokenContainer p, .tokenTitle h2, .tokenContainer ul, .posts .titlePost h1, .contactInfo h1 {
+nav ul a, #token ul li, header nav button, .home h1, .home p, .welcomeMetaverse p, .tokenContainer p, .tokenContainer ul, .posts .titlePost h1, .contactInfo h1 {
     font-family: 'Poppins';
 }
 
-.home h2, .digitalWorld .parrafo p{
+.tokenTitle h1 strong, #token ul li strong {
+    font-weight: 900;
+    color: #2F2F2F;
+}
+
+.home h2, .digitalWorld .parrafo p, .tokenTitle h2, .tokenTitle h2 strong{
     font-family: 'AlegreyaSans';
+    letter-spacing: 2px;
 }
 
 nav ul a {
@@ -180,7 +186,7 @@ nav button {
 
 /* WELCOME */
 
-.welcomeDigital, .welcomeMetaverse, .token, .containerPost, .partners {
+.welcomeDigital, .welcomeMetaverse, #token, .containerPost, .partners {
     padding: 150px 15%;
 }
 
@@ -272,11 +278,82 @@ nav button {
     letter-spacing: 1px;
 }
 
-.tokenContainer ul {
-    width: 80%;
+#token ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
     line-height: 1.5;
     letter-spacing: 1px;
+    gap: 10px;
+}
+
+#token ul li {
+    padding: 15px;
+    border-right: 1px solid var(--amarillo);
+    font-size: 13px;
+}
+
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
 }
 
 /* ROADMAP */
@@ -297,7 +374,7 @@ nav button {
 }
 
 .title h1 {
-    margin-top: 13px;
+    margin-top: 20px;
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
 }
@@ -673,6 +750,14 @@ form input[type="submit"] {
 /* RESPONSIVE */
 
 @media (max-width: 450px) {
+    #token ul {
+        flex-direction: column;
+    }
+    #token ul li {
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid var(--amarillo);
+    }
     header {
         padding: 15px 5%;
     }

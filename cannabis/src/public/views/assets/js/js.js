@@ -72,5 +72,49 @@ const handleConnection = async () => {
 document.getElementById("connect_button").addEventListener("click", handleConnection);
 document.getElementById('button_connect').addEventListener("click", handleConnection);
 
+//TOOLTIP
+
+// Obtén los elementos con la clase "tooltip"
+const tooltipElements = document.querySelectorAll('.tooltip');
+
+// Agrega un controlador de eventos 'click' a cada elemento
+tooltipElements.forEach((element) => {
+    element.addEventListener('click', () => {
+        // Cambia el contenido del tooltip
+        if (element.getAttribute('data-tooltip') === 'Copy') {
+            element.setAttribute('data-tooltip', 'Copied');
+
+            // Copia el contenido correspondiente al portapapeles
+            const clipboardType = element.getAttribute('data-clipboard');
+            const contentToCopy = getContentToCopy(clipboardType);
+            copyToClipboard(contentToCopy);
+
+            // Establece un temporizador para restaurar el tooltip a "Copy" después de un segundo
+            setTimeout(() => {
+                element.setAttribute('data-tooltip', 'Copy');
+            }, 1000);
+        }
+    });
+});
+
+// Función para obtener el contenido a copiar
+function getContentToCopy(type) {
+    if (type === 'URL') {
+        return 'https://swapcoffeeup.com';
+    } else if (type === 'CONTRACT') {
+        return '0x88835252cae9e1aca2dd894924eb02dfa932ee85';
+    }
+}
+
+// Función para copiar al portapapeles
+function copyToClipboard(content) {
+    const el = document.createElement('textarea');
+    el.value = content;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}
+
 
 
