@@ -583,7 +583,7 @@ svg {
     fill: white;
 }
 
-.containerPost button {
+.containerPost a {
     background: linear-gradient(rgb(4, 184, 4) 10%, var(--verde) 90%);
     color: white;
     padding: 10px 40px;
@@ -806,7 +806,7 @@ form input[type="submit"] {
     .posts .titlePost img {
         width: 50%;
     }
-    .containerPost button {
+    .containerPost a {
         font-size: 18px;
     }
     .post img, .partner img {
