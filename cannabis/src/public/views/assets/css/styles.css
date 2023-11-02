@@ -1079,13 +1079,28 @@ form input[type="submit"] {
 
 /* RESPONSIVE */
 
+@media (max-width: 992px) {
+    .elementoStake {
+        width: 95%;
+    }
+}
+
 @media (max-width: 750px) {
     .cardSwap {
         width: 85%;
     }
+    .separacionStake .reward {
+        flex-direction: column;
+    }
+    .elementoStake img {
+        display: none;
+    }
 }
 
 @media (max-width: 450px) {
+    .stake {
+        padding-top: 180px;
+    }
     .cardSwapContainer h1 {
         font-size: 30px;
     }
