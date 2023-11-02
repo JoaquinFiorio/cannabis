@@ -784,7 +784,7 @@ form input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/fondo-individual.png");
+    background-image: url("../img/fondo-individual-3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -834,7 +834,7 @@ form input[type="submit"] {
     align-items: center;
     display: flex;
     flex-direction: column;
-    z-index: 2;
+    z-index: 4;
 }
 
 .cardSwapContainer h1 {
@@ -974,7 +974,19 @@ form input[type="submit"] {
 
 /* RESPONSIVE */
 
+@media (max-width: 750px) {
+    .cardSwap {
+        width: 85%;
+    }
+}
+
 @media (max-width: 450px) {
+    .cardSwapContainer h1 {
+        font-size: 30px;
+    }
+    .input {
+        width: 300px;
+    }
     #token ul {
         flex-direction: column;
     }
