@@ -784,7 +784,7 @@ form input[type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/fondo-individual-3.png");
+    background-image: url("../img/fondo-individual.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -881,16 +881,17 @@ form input[type="submit"] {
 
 .icon {
     position: absolute;
-    top: 52%;
     transform: translateY(-50%);
 }
 
 .tether {
+    top: 49%;
     width: 8%;
     left: 5px;
 }
 
 .coin {
+    top: 52%;
     width: 14%;
     left: -5px;
 }
