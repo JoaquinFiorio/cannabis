@@ -16,7 +16,6 @@ var swiper = new Swiper(".swiper", {
         slideShadows: true
     },
     breakpoints: {
-        // Cuando el ancho de la ventana es igual o mayor a 768px
         768: {
             slidesPerView: 1,
             spaceBetween: 40,
@@ -44,7 +43,7 @@ document.getElementById("connect_button").addEventListener("click", async () => 
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
     const formattedAccount = `${account.substring(0, 4)}...${account.slice(-4)}`;
-    // Modificar el contenido del <h2> con el valor de la cuenta
+    
     const h2Element = document.getElementById('accountInfo');
     h2Element.textContent = `Cuenta: ${formattedAccount}`;
     h2Element.style.display = 'block';
@@ -57,14 +56,12 @@ const handleConnection = async () => {
     const account = accounts[0];
     const formattedAccount = `${account.substring(0, 4)}...${account.slice(-4)}`;
     
-    // Modificar el contenido del <h2> con el valor de la cuenta
     const h2Element = document.getElementById('accountInfo');
     h2Element.textContent = `Cuenta: ${formattedAccount}`;
     h2Element.style.display = 'block';
     const pElement = document.getElementById("connect_button");
     pElement.style.display = 'none'
-
-    // Reemplazar el texto del botón
+    
     const buttonElement = document.getElementById('button_connect');
     buttonElement.textContent = formattedAccount;
 }
@@ -74,22 +71,18 @@ document.getElementById('button_connect').addEventListener("click", handleConnec
 
 //TOOLTIP
 
-// Obtén los elementos con la clase "tooltip"
 const tooltipElements = document.querySelectorAll('.tooltip');
 
-// Agrega un controlador de eventos 'click' a cada elemento
+
 tooltipElements.forEach((element) => {
     element.addEventListener('click', () => {
-        // Cambia el contenido del tooltip
         if (element.getAttribute('data-tooltip') === 'Copy') {
             element.setAttribute('data-tooltip', 'Copied');
-
-            // Copia el contenido correspondiente al portapapeles
+            
             const clipboardType = element.getAttribute('data-clipboard');
             const contentToCopy = getContentToCopy(clipboardType);
             copyToClipboard(contentToCopy);
-
-            // Establece un temporizador para restaurar el tooltip a "Copy" después de un segundo
+            
             setTimeout(() => {
                 element.setAttribute('data-tooltip', 'Copy');
             }, 1000);
@@ -97,7 +90,6 @@ tooltipElements.forEach((element) => {
     });
 });
 
-// Función para obtener el contenido a copiar
 function getContentToCopy(type) {
     if (type === 'URL') {
         return 'https://swapcoffeeup.com';
@@ -106,7 +98,6 @@ function getContentToCopy(type) {
     }
 }
 
-// Función para copiar al portapapeles
 function copyToClipboard(content) {
     const el = document.createElement('textarea');
     el.value = content;

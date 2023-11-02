@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+    <body style="min-height: 120vh; position: relative; z-index: -1">
+        <%- include('./partials/header') %>
+        <section class="swap">
+            <div>
+                <div>
+                    <h1>COFFEE UP <span>SWAP</span></h1>
+                    <div>
+                        <div>
+                            <img src="" alt="">
+                            <input type="text" placeholder="Enter the amount">
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <input type="text" placeholder="Enter the amount">
+                        </div>
+                        <div>
+                            <button>Approve</button>
+                            <img src="" alt="">
+                            <button>Swap</button>
+                        </div>
+                        <h4>Tolerable slip (%): <span>0.5%</span></h4>
+                        <h6>Minimum received: 000</h6>
+                    </div>
+                </div>
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+        <script src="./views/assets/js/js.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                delay: 1,
+                duration: 1500,
+                easing: 'ease'
+            });
+        </script>
+    </body>
+</html>
