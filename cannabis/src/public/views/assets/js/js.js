@@ -1,9 +1,9 @@
 window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
+    const header = document.querySelector("header");
     header.classList.toggle("menuFixed", window.scrollY>50);
 });
 
-var swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
