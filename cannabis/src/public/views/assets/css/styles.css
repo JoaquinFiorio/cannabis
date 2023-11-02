@@ -778,6 +778,198 @@ form input[type="submit"] {
     }
 }
 
+/* SWAP */
+
+.swap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/fondo-individual-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 102vh;
+}
+
+.cardSwap {
+    margin-top: 100px;
+    width: 55%;
+    height: 500px;
+    padding: 50px;
+    background-image: url("../img/material-base/quarters.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    position: relative;
+}
+
+.cardSwap::before {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--amarillo);
+    border-radius: 100px;
+    top: -20px;
+    left: 20px;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000008a;
+    border-radius: 100px;
+}
+
+.cardSwapContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.cardSwapContainer h1 {
+    color: white;
+    font-family: 'Poppins';
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.cardSwapContainer h1 span{
+    color: var(--amarillo);
+    font-weight: 700;
+}
+
+.formSwap {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.input {
+    width: 360px;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    border: 1px solid #323030;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: italic;
+}
+
+.icon {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+.tether {
+    width: 8%;
+    left: 5px;
+}
+
+.coin {
+    width: 14%;
+    left: -5px;
+}
+
+.flechasSwap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flechasSwap img {
+    width: 10%;
+}
+
+.approveSwap {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.approveSwap img {
+    width: 6%;
+}
+
+.approveSwap button {
+    width: 130px;
+    border: none;
+    padding: 5px 15px;
+    background: linear-gradient(var(--amarillo), #f5c132);
+    color: var(--negro);
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.slip {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slip h4, .slip h6 {
+    text-align: center;
+    color: var(--blanco);
+    font-family: 'Poppins';
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.slip h4 {
+    font-size: 20px;
+}
+
+.slip h6 {
+    font-size: 16px;
+}
+
+.cannabisSwap, .cafeOroSwap {
+    position: absolute;
+    z-index: 3;
+}
+
+.cannabisSwap {
+    left: -70px;
+    bottom: -20px;
+}
+
+.cafeOroSwap {
+    width: 9%;
+    left: 50px;
+    bottom: -20px;
+    transform: rotate(60deg);
+}
+
 
 /* RESPONSIVE */
 

@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
-    <body style="min-height: 120vh; position: relative; z-index: -1">
+    <body>
         <%- include('./partials/header') %>
         <section class="swap">
-            <div>
-                <div>
+            <div class="cardSwap">
+                <div class="capa"></div>
+                <div class="cardSwapContainer">
                     <h1>COFFEE UP <span>SWAP</span></h1>
-                    <div>
-                        <div>
-                            <img src="" alt="">
-                            <input type="text" placeholder="Enter the amount">
+                    <div class="formSwap">
+                        <div class="input-container">
+                            <img class="icon tether" src="./views/assets/img/theter.png" alt="">
+                            <input class="input" type="text" placeholder="Enter the amount">
                         </div>
-                        <div>
-                            <img src="" alt="">
-                            <img src="" alt="">
+                        <div class="flechasSwap">
+                            <img src="./views/assets/img/flecha-abajo.png" alt="">
+                            <img src="./views/assets/img/flecha-arriba.png" alt="">
                         </div>
-                        <div>
-                            <img src="" alt="">
-                            <input type="text" placeholder="Enter the amount">
+                        <div class="input-container">
+                            <img class="icon coin" src="./views/assets/img/coin.png" alt="">
+                            <input class="input" type="text" placeholder="Enter the amount">
                         </div>
-                        <div>
+                        <div class="approveSwap">
                             <button>Approve</button>
-                            <img src="" alt="">
+                            <img src="./views/assets/img/flecha-simple-derecha.png" alt="">
                             <button>Swap</button>
                         </div>
-                        <h4>Tolerable slip (%): <span>0.5%</span></h4>
-                        <h6>Minimum received: 000</h6>
+                        <div class="slip">
+                            <h4>Tolerable slip (%): <span>0.5%</span></h4>
+                            <h6>Minimum received: 000</h6>
+                        </div>
                     </div>
                 </div>
-                <img src="" alt="">
-                <img src="" alt="">
+                <img class="cannabisSwap" src="./views/assets/img/cannabis-2.png" alt="">
+                <img class="cafeOroSwap" src="./views/assets/img/cafe-oro.png" alt="">
             </div>
         </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
-        <script src="./views/assets/js/js.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init({
-                delay: 1,
-                duration: 1500,
-                easing: 'ease'
-            });
-        </script>
+        <%- include('./partials/scripts') %>
     </body>
 </html>
