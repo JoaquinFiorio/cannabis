@@ -33,42 +33,6 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (typeof window.ethereum !== 'undefined') {
-        console.log('MetaMask is installed!');
-    }
-});
-
-document.getElementById("connect_button").addEventListener("click", async () => {
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    const formattedAccount = `${account.substring(0, 4)}...${account.slice(-4)}`;
-    
-    const h2Element = document.getElementById('accountInfo');
-    h2Element.textContent = `Cuenta: ${formattedAccount}`;
-    h2Element.style.display = 'block';
-    const pElement = document.getElementById("connect_button");
-    pElement.style.display = 'none'
-})
-
-const handleConnection = async () => {
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    const formattedAccount = `${account.substring(0, 4)}...${account.slice(-4)}`;
-    
-    const h2Element = document.getElementById('accountInfo');
-    h2Element.textContent = `Cuenta: ${formattedAccount}`;
-    h2Element.style.display = 'block';
-    const pElement = document.getElementById("connect_button");
-    pElement.style.display = 'none'
-    
-    const buttonElement = document.getElementById('button_connect');
-    buttonElement.textContent = formattedAccount;
-}
-
-document.getElementById("connect_button").addEventListener("click", handleConnection);
-document.getElementById('button_connect').addEventListener("click", handleConnection);
-
 //TOOLTIP
 
 const tooltipElements = document.querySelectorAll('.tooltip');

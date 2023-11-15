@@ -88,7 +88,7 @@ nav ul {
     align-items: center;
 }
 
-nav ul a, #token ul li, header nav button, .home h1, .home p, .welcomeMetaverse p, .tokenContainer p, .tokenContainer ul, .posts .titlePost h1, .contactInfo h1 {
+nav ul a, #token ul li, header nav .botonApp, .home h1, .home p, .welcomeMetaverse p, .tokenContainer p, .tokenContainer ul, .posts .titlePost h1, .contactInfo h1 {
     font-family: 'Poppins';
 }
 
@@ -123,7 +123,7 @@ nav ul a:hover::before {
     width: 100%;
 }
 
-nav button {
+nav .botonApp {
     padding: 10px 50px;
     border: 2px solid var(--amarillo);
     border-radius: 25px;
