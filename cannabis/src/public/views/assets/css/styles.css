@@ -151,6 +151,7 @@ nav .botonApp {
     position: absolute;
     top: 100%;
     left: 0;
+    width: 110px;
     background-color: #3d3d3d;
 }
 
@@ -159,7 +160,7 @@ nav .botonApp {
 }
 
 .menu li {
-    padding: 17px;
+    padding: 12px;
 }
 
 .menu ul li {
@@ -564,10 +565,35 @@ background-image: none;
 
 .liquidity {
     background-image: url("../img/Liquidity-Circle.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 120vh;
+    margin-top: -10px;
+}
+
+@media (min-width: 1000px) and (max-width: 1350px) {
+    .liquidity {
+        margin-top: -100px;
+    }
+}
+
+@media (min-width: 860px) and (max-width: 1000px) {
+    .liquidity {
+        margin-top: -150px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 860px) {
+    .liquidity {
+        margin-top: -205px;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 650px) {
+    .liquidity {
+        margin-top: -250px;
+    }
 }
 
 /* POSTS */
